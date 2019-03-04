@@ -1,7 +1,15 @@
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
 import { importSchema } from "graphql-import";
-import db from "./db";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
+
+//Connect MongoDB
+mongoose.connect(
+  process.env.DB_URI,
+  { useNewUrlParser: true }
+);
 
 // Models
 import User from "./models/User";
@@ -22,6 +30,10 @@ const app = express();
 app.use(express.static("public"));
 
 server.applyMiddleware({ app });
-app.listen({ port: 5000 }, () =>
-  console.log(`🚀 Server ready at http://localhost:5000${server.graphqlPath}`)
+app.listen({ port: process.env.PORT }, () =>
+  console.log(
+    `🚀 Server ready at http://localhost:${process.env.PORT}${
+      server.graphqlPath
+    }`
+  )
 );
