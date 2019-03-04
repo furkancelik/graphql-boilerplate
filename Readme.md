@@ -41,7 +41,7 @@ Open Playground
 
 ```
 
-** Result **
+**Result**
 
 ```
 {
@@ -65,7 +65,7 @@ Open Playground
 
 #### Post List (Query);
 
-** Query **
+**Query**
 
 ```
 {
@@ -79,7 +79,7 @@ Open Playground
 }
 ```
 
-** Result **
+**Result**
 
 ```
 {
@@ -110,7 +110,7 @@ Open Playground
 
 #### Register (Mutation)
 
-** Query **
+**Query**
 
 ```
 mutation($data: createUserInput!) {
@@ -120,13 +120,13 @@ mutation($data: createUserInput!) {
 }
 ```
 
-** Variables **
+**Variables**
 
 ```
 {"data": {"fullName": "furkan çelik","username": "furkancelik","password": "123"}}
 ```
 
-** Result **
+**Result**
 
 ```
 {
@@ -142,7 +142,7 @@ mutation($data: createUserInput!) {
 
 #### Login (Mutation)
 
-** Query **
+**Query**
 
 ```
 mutation($data: loginUserInput) {
@@ -152,13 +152,13 @@ mutation($data: loginUserInput) {
 }
 ```
 
-** Variables **
+**Variables**
 
 ```
 {"data": {"username": "furkan","password": "123"}}
 ```
 
-** Result **
+**Result**
 
 ```
 {
@@ -174,7 +174,7 @@ mutation($data: loginUserInput) {
 
 #### Create Post (Mutation / Authorized )
 
-** Query **
+**Query**
 
 ```
 mutation($data: createPostInput!) {
@@ -188,7 +188,7 @@ mutation($data: createPostInput!) {
 }
 ```
 
-** Variables **
+**Variables**
 
 ```
 {"data": {
@@ -197,13 +197,13 @@ mutation($data: createPostInput!) {
 }}
 ```
 
-** HTTP HEADERS **
+**HTTP HEADERS**
 
 ```
 {"Authorization":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2MxMWY4NjA2YjBhMDg4OWYwNGE0NCIsInVzZXJuYW1lIjoiZnVya2FuIiwiaWF0IjoxNTUxNjY2NjY0LCJleHAiOjE1NTE2NzAyNjR9.COw0Uektgtk0jGEY1OsedQEx7sU5PI-lFjoSsW_8k9A"}
 ```
 
-** Result **
+**Result**
 
 ```
 {
