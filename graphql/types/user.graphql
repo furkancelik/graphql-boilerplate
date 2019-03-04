@@ -1,8 +1,11 @@
+scalar Date
+
 type User {
   id: ID!
   fullName: String!
   username: String!
   posts: [Post!]!
+  createdAt: Date
 }
 
 type Query {
