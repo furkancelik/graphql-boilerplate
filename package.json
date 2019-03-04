@@ -3,5 +3,21 @@
   "version": "1.0.0",
   "main": "server.js",
   "author": "Furkan Celik",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js --exec babel-node --ext js,graphql"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.4.8",
+    "express": "^4.16.4",
+    "graphql": "^14.1.1",
+    "graphql-import": "^0.7.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "nodemon": "^1.18.10"
+  }
 }
