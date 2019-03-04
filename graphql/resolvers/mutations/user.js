@@ -2,11 +2,15 @@ import bcrypt from "bcrypt";
 import Token from "../../../helpers/token";
 
 export default {
-  register: async (parent, { data: { username, password } }, { User }) => {
+  register: async (
+    parent,
+    { data: { fullName, username, password } },
+    { User }
+  ) => {
     try {
       const user = await User.findOne({ username });
       if (user) throw new Error("User already exists.");
-      const newUser = await User({ username, password }).save();
+      const newUser = await User({ username, password, fullName }).save();
       return { token: Token.generate(newUser) };
     } catch (e) {
       throw new Error(e);
