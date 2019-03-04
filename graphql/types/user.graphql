@@ -8,11 +8,17 @@ type User {
 type Query {
   user(id: ID!): User!
   users: [User!]!
+  activeUser: User
 }
 
 type Mutation {
-  register(data: createUserInput!): User
-  login(data: loginUserInput): User
+  register(data: createUserInput!): Token
+  login(data: loginUserInput): Token
+  updateProfile(data: updateProfileInput): User
+}
+
+input updateProfileInput {
+  fullName: String!
 }
 
 input loginUserInput {

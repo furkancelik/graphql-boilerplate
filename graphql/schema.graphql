@@ -3,3 +3,5 @@
 
 # import Query from './types/post.graphql'
 # import Mutation from './types/post.graphql'
+
+# import Query from './types/token.graphql'

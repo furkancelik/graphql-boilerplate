@@ -12,5 +12,13 @@ export default {
     } catch (e) {
       throw new Error(e);
     }
+  },
+  activeUser: async (parent, args, { activeUser, User }) => {
+    if (!activeUser) return null;
+    try {
+      return await User.findOne({ username: activeUser.username });
+    } catch (e) {
+      throw new Error(e);
+    }
   }
 };
