@@ -1,6 +1,7 @@
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
 import { importSchema } from "graphql-import";
+import db from "./db";
 
 //Resolvers
 import resolvers from "./graphql/resolvers";

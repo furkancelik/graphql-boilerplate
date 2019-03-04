@@ -11,7 +11,8 @@
     "apollo-server-express": "^2.4.8",
     "express": "^4.16.4",
     "graphql": "^14.1.1",
-    "graphql-import": "^0.7.1"
+    "graphql-import": "^0.7.1",
+    "mongoose": "^5.4.17"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
