@@ -3,12 +3,17 @@ import { ApolloServer } from "apollo-server-express";
 import { importSchema } from "graphql-import";
 import db from "./db";
 
+// Models
+import User from "./models/User";
+import Post from "./models/Post";
+
 //Resolvers
 import resolvers from "./graphql/resolvers";
 
 const server = new ApolloServer({
   typeDefs: importSchema("./graphql/schema.graphql"),
-  resolvers
+  resolvers,
+  context: { User, Post }
 });
 
 const app = express();

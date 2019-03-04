@@ -9,3 +9,18 @@ type Query {
   user(id: ID!): User!
   users: [User!]!
 }
+
+type Mutation {
+  register(data: createUserInput!): User
+  login(data: loginUserInput): User
+}
+
+input loginUserInput {
+  username: String!
+  password: String!
+}
+input createUserInput {
+  fullName: String!
+  username: String!
+  password: String!
+}
