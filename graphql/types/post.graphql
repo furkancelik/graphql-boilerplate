@@ -12,9 +12,16 @@ type Query {
 
 type Mutation {
   createPost(data: createPostInput!): Post
+  editPost(data: editPostInput!): Post
 }
 
 input createPostInput {
+  title: String!
+  desciption: String!
+}
+
+input editPostInput {
+  id: ID!
   title: String!
   desciption: String!
 }
