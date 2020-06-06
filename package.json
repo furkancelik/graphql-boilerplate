@@ -8,7 +8,7 @@
     "start": "nodemon server.js --exec babel-node --ext js,graphql"
   },
   "dependencies": {
-    "apollo-server-express": "^2.4.8",
+    "apollo-server-express": "^2.14.2",
     "bcrypt": "^3.0.6",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
