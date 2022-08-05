@@ -15,7 +15,7 @@
     "graphql": "^14.1.1",
     "graphql-import": "^0.7.1",
     "jsonwebtoken": "^8.5.0",
-    "mongoose": "^5.4.17"
+    "mongoose": "^5.7.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
